@@ -1,112 +1,144 @@
-🌤 Weather Forecasting Using Synthetic Data (Linear Regression)
-📌 Project Overview
+🌦️ Weather Temperature Prediction using Linear & Polynomial Regression
 
-This project demonstrates how Linear Regression can be used to predict temperature using artificially generated weather data.
-Instead of using a real dataset, a synthetic dataset is created to simulate weather conditions such as humidity, pressure, wind speed, and sunlight.
+This project builds and compares Linear Regression and Polynomial Regression models to predict daily temperature using historical weather data. It also includes data visualization using pairplots to understand relationships between temperature and other features.
 
-The model then learns from this data and predicts temperature values.
-This project is ideal for understanding regression modelling, data generation, and prediction visualization.
+📁 Dataset
 
-📊 Synthetic Dataset Description
+Dataset used:
 
-The dataset is programmatically generated using random values with realistic ranges:
+/content/daily_weather.csv
 
-Feature	Description	Unit
-Humidity	Moisture in the air	%
-Pressure	Atmospheric pressure	hPa
-Wind	Wind speed	m/s
-Sunlight	Sunlight duration	hours
-Temperature	Output variable (Target)	°C
 
-The temperature is generated using a mathematical formula with controlled noise to simulate real-world behavior.
+Source: Kaggle (Indian Weather Dataset)
 
-🛠 Technologies Used
+🎯 Project Objective
+
+To:
+
+Predict temperature using regression models
+
+Compare Linear vs Polynomial Regression
+
+Visualize data relationships using Pairplot
+
+Evaluate performance using accuracy metrics
+
+Display actual vs predicted temperature
+
+⚙️ Technologies Used
 
 Python
 
-NumPy
-
 Pandas
+
+NumPy
 
 Matplotlib
 
-Scikit-learn
+Seaborn
 
-⚙ How the Model Works
+Scikit-Learn
 
-Synthetic weather data is generated.
+Google Colab / Jupyter Notebook
 
-Features are separated from the target (Temperature).
+🧠 Models Implemented
+1. Linear Regression
 
-Dataset is split into training and testing sets.
+Assumes a linear relationship between input features and temperature.
 
-Linear Regression model is trained.
+2. Polynomial Regression (Degree = 2)
 
-Predictions are generated.
+Handles non-linear relationships by expanding features.
 
-Performance evaluated with R² and RMSE.
+📊 Exploratory Data Analysis
+Pairplot Visualization
 
-Results are plotted.
+Used to visualize relationships between temperature and numeric features:
 
-📂 Project Structure
-├── weather_prediction.py
+Helps detect linear / non-linear patterns
+
+Helps find strong predictors
+
+Detects outliers
+
+📌 Steps to Run the Project
+Step 1: Upload Dataset
+
+Upload the file daily_weather.csv in Google Colab.
+
+Step 2: Install Dependencies (if required)
+pip install pandas numpy matplotlib seaborn scikit-learn
+
+Step 3: Run the Script
+
+Execute the provided Python file / notebook.
+
+Step 4: View Results
+
+The output will include:
+
+Pairplot graph
+
+Actual vs predicted temperature table
+
+Linear regression plot
+
+Polynomial regression plot
+
+Performance metrics
+
+📈 Evaluation Metrics Used
+Metric	Meaning
+MSE	Average squared error
+RMSE	Root of MSE
+R² Score	Accuracy measure
+✅ Sample Output
+
+Example:
+
+Linear Regression:
+MSE: 4.28
+RMSE: 2.06
+R2 Score: 0.72
+
+Polynomial Regression:
+MSE: 3.91
+RMSE: 1.97
+R2 Score: 0.78
+
+🔍 Interpretation
+
+Higher R² score indicates a better model
+
+Lower RMSE indicates better prediction
+
+If Polynomial has higher R² → data is non-linear
+
+If Linear is better → data follows simple pattern
+
+🚀 Possible Enhancements
+
+Hyperparameter tuning
+
+Time-series forecasting
+
+Feature engineering
+
+Deep learning implementation
+
+Model deployment
+
+🧾 Project Structure
+/project-directory
+│
+├── daily_weather.csv
+├── temperature_prediction.ipynb
 ├── README.md
 
-🚀 How to Run
-Step 1 — Install required libraries
+👨‍💻 Author
 
-Make sure Python is installed and run:
+Created by: Pranav Karthick
 
-pip install numpy pandas matplotlib scikit-learn
+📜 License
 
-Step 2 — Run the script
-python weather_prediction.py
-
-Step 3 — View Output
-
-You will see:
-
-✅ R² and RMSE values in terminal
-✅ Table showing Actual vs Predicted temperature
-✅ Graph comparing predictions against actual values
-
-📈 Sample Output
-
-The graph shows:
-
-Real (synthetic) temperature values
-
-Model predictions
-
-A close overlap indicates good accuracy.
-
-🧠 Learning Outcomes
-
-Understanding regression models
-
-Creating datasets synthetically
-
-Training ML models
-
-Measuring prediction performance
-
-Visualizing results
-
-🔮 Future Improvements
-
-Add Polynomial Regression
-
-Introduce seasonal patterns
-
-Add noise analysis
-
-Use Random Forest
-
-Convert to real dataset input
-
-Deploy as web app
-
-✅ Conclusion
-
-This project shows how Linear Regression successfully predicts temperature when a linear relationship exists.
-It helps beginners understand how models behave under controlled environments.
+This project is licensed under the MIT License
